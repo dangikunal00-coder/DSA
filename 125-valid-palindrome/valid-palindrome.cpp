@@ -6,17 +6,13 @@ public:
 
         while (left < right) {
 
-            // Skip non-alphanumeric characters from left
             while (left < right && !isalnum(s[left])) {
                 left++;
             }
-
-            // Skip non-alphanumeric characters from right
             while (left < right && !isalnum(s[right])) {
                 right--;
             }
 
-            // Compare characters ignoring case
             if (tolower(s[left]) != tolower(s[right])) {
                 return false;
             }
